@@ -1,0 +1,1 @@
+export default function Analytics(){return <div className="page"><header className="page-header"><div><span className="eyebrow">ДАНІ</span><h1>Аналітика</h1><p>Показники бізнесу, динаміка та контроль відхилень.</p></div></header><div className="panel"><div className="empty-state">Аналітика буде побудована на реальних продажах, закупівлях і фінансових операціях.</div></div></div>}
