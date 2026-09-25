@@ -1,0 +1,2 @@
+export default function Finance(){return <Page title="Фінанси" eyebrow="ГРОШІ" text="Доходи, витрати, рахунки та рух коштів." button="+ Нова операція"/>}
+function Page({title,eyebrow,text,button}:{title:string;eyebrow:string;text:string;button:string}){return <div className="page"><header className="page-header"><div><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{text}</p></div><button className="primary-button">{button}</button></header><div className="panel"><div className="empty-state">Фінансові операції з'являться після першого запису.</div></div></div>}
