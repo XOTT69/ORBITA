@@ -23,7 +23,7 @@ export default function LoginPage() {
     } else {
       const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { company_name: company } } });
       if (error) setMessage(error.message);
-      else if (data.session) router.push("/app");
+      else if (data.session) {\n        const { data: org, error: orgError } = await supabase.from("organizations").insert({ name: company, created_by: data.user?.id }).select("id").single();\n        if (orgError) setMessage(orgError.message);\n        else { const { error: memberError } = await supabase.from("organization_members").insert({ organization_id: org.id, user_id: data.user?.id, role: "owner", status: "active" }); if (memberError) setMessage(memberError.message); else router.push("/app"); }\n      }
       else setMessage("Перевірте email для підтвердження акаунта.");
     }
     setBusy(false);
