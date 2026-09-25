@@ -1,0 +1,1 @@
+export default function Settings(){return <div className="page"><header className="page-header"><div><span className="eyebrow">СИСТЕМА</span><h1>Налаштування</h1><p>Компанія, команда, ролі та інтеграції.</p></div></header><div className="panel"><div className="empty-state">Налаштування компанії додамо після onboarding.</div></div></div>}
